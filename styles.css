@@ -1,0 +1,367 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1rem; /* Equivalent to 16px */
+    font-family: "Manrope", sans-serif;
+  }
+  
+  h1{
+    font-size: 2rem;
+  }
+  
+  h2{
+    font-size: 1.5rem;
+  }
+  
+  body {
+    background: #001f3f; /* Primary background color */
+    font-size: 1rem; /* Base font size for body text */
+  }
+  
+  section {
+    padding: 1rem; 
+    background: #001f3f; /* Section background color */
+    margin: 1rem 0; 
+    font-size: 1.1rem; 
+  }
+  
+  main {
+    background: #003366; /* Secondary background color */
+  }
+  
+  /* Navigation Styling */
+  .logo {
+    width: 100%;
+  }
+  
+  nav.box {
+    background-color: #000000; /* Navigation background color */
+    padding: 0.625rem 0; 
+    margin: -0.3125rem; 
+  }
+  
+  nav.box ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+  }
+  
+  nav.box ul li {
+    display: inline-block;
+    margin: 0 0.9375rem; 
+  }
+  
+  nav.box ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem; 
+  }
+  
+  nav.box ul li a:hover {
+    color: #00d9ff; /* Hover color */
+  }
+  /* Home Page */
+#layout1 {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Vertically center image and text */
+    justify-content: center; /* Horizontally center the content */
+    padding: 2.5rem; /* 40px is 2.5rem */
+    gap: 5rem; /* 80px is 5rem */
+  }
+  
+  #layout1-content {
+    display: flex;
+    flex-direction: column; /* Stack title and text vertically */
+    align-items: flex-start; /* Align content to the start */
+    gap: 0.625rem; /* 10px is 0.625rem */
+  }
+  
+  #layout1Img {
+    align-content: right;
+  }
+  
+  #layout1-title {
+    color: #00d9ff;
+    font-size: 1.25rem; /* 20px is 1.25rem */
+  }
+  
+  #layout1-text {
+    font-size: 1.125rem; /* 18px is 1.125rem */
+    line-height: 1.6;
+    color: #ffffff;
+    max-width: 37.5rem; /* 600px is 37.5rem */
+    text-align: left;
+  }
+  
+  /* Home-Service */
+  #layout2 {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Vertically center image and text */
+    justify-content: center; /* Horizontally center the content */
+    padding: 2.5rem; /* 40px is 2.5rem */
+    gap: 5rem; /* 80px is 5rem */
+  }
+  #layout2-content {
+    display: flex;
+    flex-direction: column; /* Stack title and text vertically */
+    align-items: flex-start; /* Align content to the start */
+    gap: 0.625rem; /* 10px is 0.625rem */
+    order: 1; /* This will ensure the content appears first on the left */
+  }
+  #layout2Img {
+    align-content: right;
+    order: 2; /* This will ensure the image appears second on the right */
+  }
+  #layout2-title {
+    text-align: center;
+    text-decoration: none;
+    color: #00d9ff;
+  }
+  #layout2-text {
+    font-size: 1.125rem; /* 18px is 1.125rem */
+    line-height: 1.6;
+    color: #ffffff;
+    max-width: 37.5rem; /* 600px is 37.5rem */
+    text-align: left;
+  }
+  
+  #layout2 a,
+  #layout3 a {
+    color: #00d9ff; /* Accent color for the link */
+    text-decoration: none; /* Remove underline */
+  }
+  #layout2 a:hover,
+  #layout3 a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+  #layout3 {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    padding: 2.5rem; 
+    color: #ffffff; /* Text color for readability */
+    text-align: center;
+  }
+  #layout3 header h1 {
+    font-size: 1.5rem; 
+    color: #00d9ff; /* Title color */
+    margin-bottom: 1.25rem; 
+  }
+  #layout3 p {
+    font-size: 1.125rem; 
+    line-height: 1.6;
+    max-width: 50rem; 
+    margin-bottom: 1.25rem; 
+  }
+  /* Contact */
+  
+  /* Location Section */
+  #location {
+    padding: 2rem; /* Section padding */
+    color: #ffffff; /* Text color */
+    text-align: center; /* Center text */
+  }
+  
+  #location h2 {
+    font-size: 1.5rem; /* Section title size */
+    color: #00d9ff; /* Title color */
+    margin-bottom: 1rem; /* Space below title */
+  }
+  
+  #location p {
+    font-size: 1.125rem; /* Paragraph text size */
+    margin: 0.5rem 0; /* Margin between paragraphs */
+  }
+  
+  #location a {
+    color: #00d9ff; /* Link color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  #location a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+  
+  /* Contact Details Section */
+  #contact-details {
+    padding: 2rem; /* Section padding */
+    color: #ffffff; /* Text color */
+    text-align: center; /* Center text */
+  }
+  
+  #contact-details h2 {
+    font-size: 1.5rem; /* Section title size */
+    color: #00d9ff; /* Title color */
+    margin-bottom: 1rem; /* Space below title */
+  }
+  
+  #contact-details p {
+    font-size: 1.125rem; /* Paragraph text size */
+    margin: 1rem 0; /* Margin between paragraphs */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Vertically center image and text */
+    justify-content: center; /* Center content */
+  }
+  
+  #contact-details img {
+    margin-right: 0.625rem; /* Space between image and text */
+    width: 2rem; 
+    height: 2rem; 
+    border-radius: 100%;
+  }
+  /* Contact Form Section */
+#contact-form {
+    padding: 2rem; /* Section padding */
+    color: #ffffff; /* Text color */
+    text-align: center; /* Center text */
+  }
+  
+  #contact-form h2 {
+    font-size: 1.5rem; /* Section title size */
+    color: #00d9ff; /* Title color */
+    margin-bottom: 1rem; /* Space below title */
+  }
+  
+  #contact-form p {
+    font-size: 1.125rem; /* Paragraph text size */
+    margin-bottom: 1rem; /* Space below text */
+  }
+  
+  #contact-form form {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack form fields vertically */
+    align-items: center; /* Center form fields */
+    gap: 1rem; /* Space between form fields */
+  }
+  
+  #contact-form label {
+    font-size: 1.125rem; /* Label text size */
+    margin-bottom: 0.5rem; /* Space below label */
+  }
+  
+  #contact-form input[type="text"],
+  #contact-form input[type="email"],
+  #contact-form textarea {
+    width: 100%; /* Full width */
+    max-width: 20rem; /* Limit the width of inputs */
+    padding: 0.5rem; /* Input padding */
+    font-size: 1rem; /* Input font size */
+    border-radius: 0.5rem; /* Rounded corners */
+    border: 1px solid #ccc; /* Border color */
+  }
+  
+  #contact-form input[type="submit"] {
+    padding: 0.75rem 1.5rem; /* Button padding */
+    font-size: 1.125rem; /* Button font size */
+    background: #00d9ff; /* Button background color */
+    color: #ffffff; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 0.5rem; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+  }
+  
+  #contact-form input[type="submit"]:hover {
+    background: #00c4e0; /* Hover background color */
+  }
+
+  /* Footer */
+footer {
+    background: #000000; /* Footer background color */
+    color: #fff; 
+    text-align: center;
+    padding: 1rem; 
+  }
+
+  /* Responsive Adjustments */
+@media (max-width: 768px) {
+    nav.box ul {
+      text-align: center;
+      display: flex; /* Turn ul into a flex container */
+      justify-content: center; /* Center the navigation links */
+      gap: 2rem; /* Space between each nav link */
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    nav.box ul li {
+      margin: 0.5rem 0;
+    }
+  
+    nav.box ul li a {
+      font-size: 1rem;
+      gap: 2rem;
+    }
+  
+    #layout1, #layout2 {
+      flex-direction: column;
+      gap: 2rem; /* Reduce gap for smaller screens */
+    }
+  
+    #layout2-content, #layout1-content {
+      align-items: center; /* Center-align content for mobile */
+      text-align: center;
+    }
+  
+    #layout1-title, #layout2-title {
+      font-size: 1.5rem;
+    }
+  
+    #layout1-text, #layout2-text {
+      font-size: 1rem;
+    }
+  
+    #layout3 p {
+      max-width: 100%;
+    }
+  
+    .team {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .member {
+      margin: 1rem 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      font-size: 0.875rem;
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    h2 {
+      font-size: 1.25rem;
+    }
+  
+    section {
+      font-size: 1rem;
+    }
+  
+    nav.box ul li {
+      font-size: 0.875rem;
+    }
+  
+    #layout1-title, #layout2-title {
+      font-size: 1.25rem;
+    }
+  
+    #layout1-text, #layout2-text {
+      font-size: 0.875rem;
+    }
+  
+    #layout3 header h1 {
+      font-size: 1.25rem;
+    }
+  
+    #layout3 p {
+      font-size: 1rem;
+    }
+  }
