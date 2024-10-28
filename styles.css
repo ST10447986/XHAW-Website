@@ -30,6 +30,39 @@
   main {
     background: #003366; /* Secondary background color */
   }
+  /* Dropdown styling */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content li a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content li a:hover {
+  background-color: #000000;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
   
   /* Navigation Styling */
   .logo {
@@ -365,3 +398,56 @@ footer {
       font-size: 1rem;
     }
   }
+  /* Calculate Fees Section */
+#calculate-fees {
+  background-color: #003366;
+  color: #ffffff;
+  padding: 2rem;
+  text-align: center;
+  margin: 2rem 0;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#calculate-fees h2 {
+  color: #00d9ff;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#calculate-fees form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+#calculate-fees label {
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+#calculate-fees button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #00d9ff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#calculate-fees button:hover {
+  background-color: #00c4e0;
+}
+
+#totalFee {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #00ff88;
+}

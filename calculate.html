@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Empowering The Nation</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+		<img alt="ETN-Logo" class="logo" src="assets\ETN-Logo.png">
+	</body>
+    <nav class="box">
+		<ul>
+            <li><a href="home.html">Home</a></li> 
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a href="courses.html">Courses</a>
+                <ul class="dropdown-content">
+                    <li><a href="6Week.html">6 week </a></li>
+                    <li><a href="6Month.html">6 month</a></li>
+                </ul>
+            </li>
+            <li><a href="calculate.html">Calcualte fees</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+	</nav>
+    <body>
+		<main>
+            <section id="calculate-fees">
+                <h2>Calculate Course Fees</h2>
+                <form id="feeCalculatorForm">
+                    <h1>6 week courses</h1>
+                    <label><input type="checkbox" class="course" value="1500"> First Aid - R1500</label><br>
+                    <label><input type="checkbox" class="course" value="1500"> Sewing - R1500</label><br>
+                    <label><input type="checkbox" class="course" value="1500"> Landscaping - R1500</label><br>
+                    <label><input type="checkbox" class="course" value="1500"> Life Skills - R1500</label><br>
+                    <h1>6 month courses</h1>
+                    <label><input type="checkbox" class="course" value="750"> Child Minding - R750</label><br>
+                    <label><input type="checkbox" class="course" value="750"> Cooking - R750</label><br>
+                    <label><input type="checkbox" class="course" value="750"> Garden Maintenance - R750</label><br>
+                    <button type="button" onclick="calculateFees()">Calculate Total Fee</button>
+                </form>
+                <p id="totalFee">Total Fee: R0</p>
+            </section>
+            
+            <script>
+            function calculateFees() {
+                const courseCheckboxes = document.querySelectorAll(".course:checked");
+                let total = 0;
+            
+                courseCheckboxes.forEach((checkbox) => {
+                    total += parseFloat(checkbox.value);
+                });
+            
+                let discount = 0;
+                if (courseCheckboxes.length === 2) discount = 0.05;
+                else if (courseCheckboxes.length === 3) discount = 0.10;
+                else if (courseCheckboxes.length > 3) discount = 0.15;
+            
+                const discountedTotal = total * (1 - discount);
+                const totalWithVAT = discountedTotal * 1.15;
+                document.getElementById("totalFee").textContent = `Total Fee: R${totalWithVAT.toFixed(2)}`;
+            }
+            </script>
+            
+        </main>
+		<footer>
+			<p>&copy; 2024 Empowering The Nation. All rights reserved.</p>
+		</footer>
+	</body>
+</html>
